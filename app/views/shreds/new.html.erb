@@ -1,0 +1,24 @@
+<a href="/" id="home-button">SHREDDIT</a>
+<br>
+<br>
+<br>
+<form action="<%= shreds_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Name:<br>
+    <input type="text" name="shred[name]" value="<%=@shred.name%>">
+  </label>
+  <br>
+  <label>Title:<br>
+    <input type="text" name="shred[title]" value="<%=@shred.title%>">
+  </label>
+  <br>
+  <label>Description:<br>
+    <textarea name="shred[description]"><%=@shred.description%></textarea>
+  </label>
+  <br>
+  <label>Sidebar:<br>
+    <textarea name="shred[sidebar]"><%=@shred.sidebar%></textarea>
+  </label>
+  <br>
+  <input type="submit" value="Create!">
+</form>

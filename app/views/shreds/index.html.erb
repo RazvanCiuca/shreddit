@@ -1,0 +1,11 @@
+<h2>Welcome to the shittiest of Reddits!</h2>
+<% if @shreds%>
+  <ol>
+    <% @shreds.each do |shred| %>
+    <li>
+      <%= shred.name %>
+    </li>
+    <% end %>
+  </ol>
+<% end %>
+<%= button_to 'Create a new Shred!', new_shred_url, :method => :get %>
