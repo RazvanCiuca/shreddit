@@ -1,7 +1,5 @@
 class RootController < ApplicationController
-  def root
-    p '!!!!!!!!!!!!!!!!!!!!!!!!!!'
-    
-    render '/shreds/index'
+  def root    
+    redirect_to shreds_url
   end
 end

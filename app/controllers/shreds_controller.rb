@@ -17,4 +17,9 @@ class ShredsController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @shred = Shred.find(params[:id])
+    render :show
+  end
 end

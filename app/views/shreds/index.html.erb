@@ -3,7 +3,10 @@
   <ol>
     <% @shreds.each do |shred| %>
     <li>
-      <%= shred.name %>
+      <a href="<%= shred_url(shred) %>" >
+        <b><%= shred.name %></b>: <%= shred.title %>         
+      </a>
+      <br><%= shred.description %> 
     </li>
     <% end %>
   </ol>
